@@ -16,10 +16,11 @@
 }
 
 .logo {
+  @extend %rubik-500;
+  color: $header-color;
   display: flex;
-  align-items: center;
-  color: inherit;
-  text-decoration: inherit;
+  align-items: center;  
+  text-decoration: none;
   &__svg {
     margin-right: 10px;
   }
@@ -116,5 +117,16 @@
     padding: 15px;
   }
 }
+
+.main {
+  height: 500px;
+  width: 100%;
+}
+
+.footer-top {
+  display: flex;
+}
+
+
 
 @import "media";
