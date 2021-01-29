@@ -1,13 +1,10 @@
 $(function(){
-  $('.top-slider__inner').slick({
+  $('.top-slider__list').slick({
     dots: true,
     arrows: false
   });
-  let mixer = mixitup('.products-of-the-week__list');
+  let mixer = mixitup('.products__list');
 });
-
-
-
 
 function handleFirstTab(e) {
   if (e.keyCode === 9) { // tab key
