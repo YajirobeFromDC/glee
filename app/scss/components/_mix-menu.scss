@@ -1,0 +1,22 @@
+.mix-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__btn {
+    @extend %dmsans-700;
+    color: #8b8b8b;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}

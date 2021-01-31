@@ -1,0 +1,54 @@
+.new-design {
+  margin-bottom: 120px;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__menu {
+    margin-bottom: 80px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 34px;
+  }
+
+  &__element {
+    @extend %dmsans-700;
+    position: relative;
+    padding: 35px;
+    min-width: 100%;
+    min-height: 246px;
+    background-repeat: no-repeat;
+    background-size: contain;     
+  }
+
+  &__link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 0;
+  }
+
+  &__name {
+    font-size: 20px;
+    color: $title-color;
+    max-width: 175px;
+  }
+
+  &__type {
+    font-size: 16px;
+    color: #a3bbc8;
+    line-height: 3;
+  }
+
+  .mixitup-control-active {
+    color: #000;
+  }
+}
+

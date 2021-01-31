@@ -4,6 +4,7 @@ $(function(){
     arrows: false
   });
   let mixer = mixitup('.products__list');
+  let mixer2 = mixitup('.new-design__list');
 });
 
 function handleFirstTab(e) {

@@ -1,0 +1,114 @@
+.footer {
+  padding-top: 94px;
+  font-size: 14px;
+  color: $footer-color;
+
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.25fr;
+    column-gap: 80px;
+    padding-bottom: 75px;
+    border-bottom: 1px solid #a3bbc8;
+  }  
+
+  &__title {
+    display: block;
+    @extend %dmsans-700;
+    text-transform: uppercase;
+    color: #1f2044;
+    margin-bottom: 14px;
+  }
+
+  &__link {
+    transition: color 0.3s;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-top: -14px;
+    margin-bottom: 24px;
+  }
+
+  &__address {
+    font-style: normal;
+  }
+
+  &__address-item {
+    text-transform: uppercase;
+
+    a {
+      text-transform: none;
+    }
+  }
+
+  &__address-item,
+  &__list-item:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    margin-bottom: 32px;
+  }
+
+  &__form {
+    height: 38px;
+  }
+
+  &__input,
+  &__btn {
+    height: 100%;
+    border: none;
+  }
+
+  &__input {
+    background-color: $warm-wood;
+
+    &::placeholder {
+      padding-left: 14px;
+      font-size: 12px;
+      color: #234969;
+    }
+  }
+
+  &__btn {
+    margin-top: 1px;
+    padding: 0 15px;
+    color: #fff;
+    background-color: #a3bbc8;
+    transition: background-color 0.3s;
+    &:active {
+      transform: scale(0.99);
+    }
+    &:hover {
+      background-color: #436372;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    min-height: 90px;
+  }
+
+  &__menu {
+    margin-left: auto;
+    display: flex;
+  }
+
+  &__menu-item {
+    text-align: center;
+    padding: 0 12px;
+
+    &:not(:last-child) {
+      border-right: 1px solid #7b7b7b;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}

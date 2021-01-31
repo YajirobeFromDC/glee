@@ -1,7 +1,8 @@
 $header-color: #436372;
 $title-color: #1a1a1a;
 $footer-color: #7b7b7b;
-
+$main-color:  #243f4d;
+$warm-wood: #fcd7b6;
 
 %rubik-400 {
   font-family: 'Rubik', sans-serif;
@@ -28,4 +29,11 @@ $footer-color: #7b7b7b;
 %dmsans-700 {
   font-family: 'DMSans', sans-serif;
   font-weight: 700;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
 }
