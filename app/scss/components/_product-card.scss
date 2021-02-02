@@ -10,6 +10,9 @@
   transition: transform 0.3s, box-shadow 0.3s;
 
   &__img {
+    max-width: 238px;
+    max-height: 206px;
+    object-fit: contain;
     margin-top: auto;
   }
 
@@ -19,7 +22,8 @@
     margin-bottom: 38px;
   }
 
-  &__name {
+  &__name {    
+    @include line-clamp(16px, 1.3, 2);
     display: block;
     @extend %dmsans-500;
     margin-bottom: 10px;
