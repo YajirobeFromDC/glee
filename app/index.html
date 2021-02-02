@@ -17,8 +17,8 @@
 </head>
 
 <body>
-
   <h1 class="visually-hidden">Glee.</h1>
+
   <header class="header">
     <div class="large-container">
 
@@ -63,15 +63,16 @@
 
         <div class="user-nav">
 
-          <div class="user-nav__search">
-            <input class="user-nav__input" type="text">
+          <form class="user-nav__search">
+            <label for="search" class="user-nav__search-label"></label>
+            <input class="user-nav__input" name="search" type="text">
             <button class="user-nav__search-btn round-control">
               <svg class="" width="20px" height="20px" fill="inherit">
                 <use xlink:href="images/sprite/stack/sprite.svg#search"></use>
               </svg>
             </button>
             <span class="visually-hidden">Search</span>
-          </div>
+          </form>
 
           <div class="user-nav__wrapper">
 
