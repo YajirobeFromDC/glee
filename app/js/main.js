@@ -3,6 +3,14 @@ $(function(){
     dots: true,
     arrows: false
   });
+
+  $('.our-partners__slider').slick({
+    slidesToShow: 5,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 1700,  
+  });  
+
   let mixer = mixitup('.products__list');
   let mixer2 = mixitup('.new-design__list');
 });
