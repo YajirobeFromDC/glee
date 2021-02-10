@@ -1,6 +1,6 @@
 .our-partners {
 
-  &__slider-wrapper {  
+  &__wrapper {  
     position: relative;  
     background-color: #fef7f0;   
 
@@ -40,4 +40,12 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  @media (max-width: 1199px) {
+    &__wrapper {   
+      &::before {
+        display: none;  
+      }   
+    }    
+  }    
 }

@@ -17,9 +17,9 @@
 </head>
 
 <body>
-  <h1 class="visually-hidden">Glee.</h1>
 
   <header class="header">
+    <h1 class="visually-hidden">Glee.</h1>
     <div class="large-container">
 
       <nav class="nav">
@@ -64,14 +64,15 @@
         <div class="user-nav">
 
           <form class="user-nav__search">
-            <label for="search" class="user-nav__search-label"></label>
-            <input class="user-nav__input" name="search" type="text">
+            <label for="search" class="user-nav__label"><span class="visually-hidden">enter your search
+                request</span></label>
+            <input class="user-nav__input" name="search" type="search">
             <button class="user-nav__search-btn round-control">
               <svg class="" width="20px" height="20px" fill="inherit">
                 <use xlink:href="images/sprite/stack/sprite.svg#search"></use>
               </svg>
+              <span class="visually-hidden">Search button</span>
             </button>
-            <span class="visually-hidden">Search</span>
           </form>
 
           <div class="user-nav__wrapper">
@@ -110,9 +111,10 @@
 
     </div>
   </header>
+  
 
   <main class="main">
-
+ 
     <div class="top-slider">
       <div class="large-container">
         <ul class="top-slider__list">
@@ -128,7 +130,8 @@
               <a class="square-control top-slider__link" href="#">Shop Now
                 <svg class="" width="22px" height="9px" fill="inherit">
                   <use xlink:href="images/sprite/stack/sprite.svg#right-arrow"></use>
-                </svg></a>
+                </svg>
+              </a>
             </div>
             <a class="top-slider__image-container" href="#">
               <img class="top-slider__img" src="images/top-slider/sofa.png" alt="sofa img">
@@ -174,28 +177,29 @@
           </li>
         </ul>
 
-        <div class="features">
-          <div class="features__item features__item--support">
+        <ul class="features">
+          <h2 class="visually-hidden">Our Features</h2>
+          <li class="features__item features__item--support">
             <div class="features__item-container">
               <h3 class="features__title">Support 24/7.</h3>
               <p class="features__text">Contact us 24 hours a day,<br>
                 7 days a week.</p>
             </div>
-          </div>
-          <div class="features__item features__item--delivery">
+          </li>
+          <li class="features__item features__item--delivery">
             <div class="features__item-container">
               <h3 class="features__title">Delivery.</h3>
               <p class="features__text">Free shipping on all US order.</p>
             </div>
-          </div>
-          <div class="features__item features__item--payment">
+          </li>
+          <li class="features__item features__item--payment">
             <div class="features__item-container">
               <h3 class="features__title">100% Payment secure.</h3>
               <p class="features__text">We ensure secure payment <br>
                 with PEV.</p>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -207,19 +211,19 @@
         </h2>
         <ul class="mix-menu products__menu">
           <li class="mix-menu__item">
-            <button class="mix-menu__btn" data-filter="all">All</button>
+            <button class="mix-menu__btn mix-menu__btn--products" data-filter="all">All</button>
           </li>
           <li class="mix-menu__item">
-            <button class="mix-menu__btn" data-filter=".category-furnitures">Furnitures</button>
+            <button class="mix-menu__btn mix-menu__btn--products" data-filter=".category-furnitures">Furnitures</button>
           </li>
           <li class="mix-menu__item">
-            <button class="mix-menu__btn" data-filter=".category-chairs">Chairs</button>
+            <button class="mix-menu__btn mix-menu__btn--products" data-filter=".category-chairs">Chairs</button>
           </li>
           <li class="mix-menu__item">
-            <button class="mix-menu__btn" data-filter=".category-lighting">Lighting</button>
+            <button class="mix-menu__btn mix-menu__btn--products" data-filter=".category-lighting">Lighting</button>
           </li>
           <li class="mix-menu__item">
-            <button class="mix-menu__btn" data-filter=".category-decor">Decor</button>
+            <button class="mix-menu__btn mix-menu__btn--products" data-filter=".category-decor">Decor</button>
           </li>
         </ul>
 
@@ -496,7 +500,7 @@
       <div class="large-container">
         <div class="lamps">
 
-          <div class="lamps__item">
+          <article class="lamps__item">
 
             <img class="lamps__img" src="images/products/lamps/1.png" alt="lamp">
 
@@ -512,9 +516,9 @@
                 </svg>
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="lamps__item">
+          <article class="lamps__item">
 
             <img class="lamps__img" src="images/products/lamps/2.png" alt="lamp">
 
@@ -522,7 +526,7 @@
               <h3 class="lamps__name">Malesuada Tempor
                 Euismod</h3>
               <div class="lamps__description">
-                <p>50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight</p>
+                <p>50W 8000lm Compact Size for HID Street Light Replacement LED Corn Light</p>
               </div>
               <a class="square-control lamps__link" href="#">
                 View More
@@ -531,7 +535,8 @@
                 </svg>
               </a>
             </div>
-          </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -543,106 +548,116 @@
 
         <ul class="mix-menu new-design__menu">
           <li class="mix-menu__item">
-            <button class="mix-menu__btn" data-filter="all">All</button>
+            <button class="mix-menu__btn mix-menu__btn--design" data-filter="all">All</button>
           </li>
           <li class="mix-menu__item">
-            <button class="mix-menu__btn" data-filter=".category-furnitures">Furnitures</button>
+            <button class="mix-menu__btn mix-menu__btn--design" data-filter=".category-furnitures">Furnitures</button>
           </li>
           <li class="mix-menu__item">
-            <button class="mix-menu__btn" data-filter=".category-chairs">Chairs</button>
+            <button class="mix-menu__btn mix-menu__btn--design" data-filter=".category-chairs">Chairs</button>
           </li>
           <li class="mix-menu__item">
-            <button class="mix-menu__btn" data-filter=".category-lighting">Lighting</button>
+            <button class="mix-menu__btn mix-menu__btn--design" data-filter=".category-lighting">Lighting</button>
           </li>
           <li class="mix-menu__item">
-            <button class="mix-menu__btn" data-filter=".category-decor">Decor</button>
+            <button class="mix-menu__btn mix-menu__btn--design" data-filter=".category-decor">Decor</button>
           </li>
         </ul>
 
         <ul class="new-design__list">
 
-          <li class="new-design__element mix category-decor" style="background-image: url('images/new-design/1.jpg');">
-            <a class="new-design__link" href="#"></a>
-            <h3 class="new-design__name">
-              Beat Flat Pendant Black
-            </h3>
-            <span class="new-design__type">
-              Classic
-            </span>
+          <li class="new-design__element mix category-decor">
+            <article class="new-design__card">
+              <img class="new-design__img" src="images/new-design/1.jpg" alt="new design example">
+              <h3 class="new-design__name">
+                Beat Flat Pendant Black
+              </h3>
+              <span class="new-design__type">
+                Classic
+              </span>
+              <a class="new-design__link" href="#"><span class="visually-hidden">go to article</span></a>
+            </article>
           </li>
 
-          <li class="new-design__element mix category-lighting"
-            style="background-image: url('images/new-design/2.jpg');">
-            <a class="new-design__link" href="#"></a>
-            <h3 class="new-design__name">
-              Lampe Sur Pieds Bamboo
-            </h3>
-            <span class="new-design__type">
-              Classic
-            </span>
+          <li class="new-design__element mix category-lighting">
+            <article class="new-design__card">
+              <img class="new-design__img" src="images/new-design/2.jpg" alt="new design example">
+              <h3 class="new-design__name">
+                Lampe Sur Pieds Bamboo
+              </h3>
+              <span class="new-design__type">
+                Classic
+              </span>
+              <a class="new-design__link" href="#"><span class="visually-hidden">go to article</span></a>
+            </article>
           </li>
 
-          <li class="new-design__element mix category-chairs" style="background-image: url('images/new-design/3.jpg');">
-            <a class="new-design__link" href="#"></a>
-            <h3 class="new-design__name">
-              Rattan Rocking
-              Chair
-            </h3>
-            <span class="new-design__type">
-              Classic
-            </span>
+          <li class="new-design__element mix category-chairs">
+            <article class="new-design__card">
+              <img class="new-design__img" src="images/new-design/3.jpg" alt="new design example">
+              <h3 class="new-design__name">
+                Rattan Rocking Chair
+              </h3>
+              <span class="new-design__type">
+                Classic
+              </span>
+              <a class="new-design__link" href="#"><span class="visually-hidden">go to article</span></a>
+            </article>
           </li>
 
-          <li class="new-design__element mix category-furnitures"
-            style="background-image: url('images/new-design/4.jpg');">
-            <a class="new-design__link" href="#"></a>
-            <h3 class="new-design__name">
-              Rattan Rocking
-              Chair
-            </h3>
-            <span class="new-design__type">
-              Classic
-            </span>
+          <li class="new-design__element mix category-furnitures">
+            <article class="new-design__card">
+              <img class="new-design__img" src="images/new-design/4.jpg" alt="new design example">
+              <h3 class="new-design__name">
+                Rattan Rocking Chair
+              </h3>
+              <span class="new-design__type">
+                Classic
+              </span>
+              <a class="new-design__link" href="#"><span class="visually-hidden">go to article</span></a>
+            </article>
           </li>
 
-          <li class="new-design__element mix category-decor" style="background-image: url('images/new-design/5.jpg');">
-            <a class="new-design__link" href="#"></a>
-            <h3 class="new-design__name">
-              Rattan Rocking
-              Chair
-            </h3>
-            <span class="new-design__type">
-              Classic
-            </span>
+          <li class="new-design__element mix category-decor">
+            <article class="new-design__card">
+              <img class="new-design__img" src="images/new-design/5.jpg" alt="new design example">
+              <h3 class="new-design__name">
+                Rattan Rocking Chair
+              </h3>
+              <span class="new-design__type">
+                Classic
+              </span>
+              <a class="new-design__link" href="#"><span class="visually-hidden">go to article</span></a>
+            </article>
           </li>
 
-          <li class="new-design__element mix category-lighting"
-            style="background-image: url('images/new-design/6.jpg');">
-            <a class="new-design__link" href="#"></a>
-            <h3 class="new-design__name">
-              Lampe Sur Pieds
-              Bamboo
-            </h3>
-            <span class="new-design__type">
-              Classic
-            </span>
+          <li class="new-design__element mix category-lighting">
+            <article class="new-design__card">
+              <img class="new-design__img" src="images/new-design/6.jpg" alt="new design example">
+              <h3 class="new-design__name">
+                Lampe Sur Pieds Bamboo
+              </h3>
+              <span class="new-design__type">
+                Classic
+              </span>
+              <a class="new-design__link" href="#"><span class="visually-hidden">go to article</span></a>
+            </article>
           </li>
 
         </ul>
 
       </div>
     </section>
-
+ 
     <div class="video" style="background-image: url('images/video/video.jpg');">
-      <a data-fancybox class="video__link" href="https://youtu.be/BfIVxp_YHtw"></a>
-      <button class="video__play-btn round-control">
+      <a data-fancybox class="video__play-btn round-control" href="https://youtu.be/BfIVxp_YHtw">
         <svg class="" width="22px" height="25px" fill="inherit">
           <use xlink:href="images/sprite/stack/sprite.svg#video-play-btn"></use>
         </svg>
         <span class="visually-hidden">
           video-presentation
         </span>
-      </button>
+      </a>
     </div>
 
     <section class="articles">
@@ -658,51 +673,91 @@
         </div>
 
         <div class="articles__content">
+
           <ul class="articles__list">
+
             <li class="articles__item">
-              <a class="articles__link" href="#">
-                <img class="articles__img" src="images/articles/1.jpg" alt="article img">
-              </a>
-              <span class="articles__type">news</span>
-              <div class="articles__text">
-                <p>Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-              </div>
 
-              <div class="articles__item-footer">
-                <span class="articles__date"> 28 JANUARY, 2020</span>
-                <span class="articles__author"> BY ADMIN</span>
-              </div>
+              <article class="article-item">
+                <a class="article-item__link" href="#">
+                  <img class="article-item__img" src="images/articles/1.jpg" alt="article img">
+                </a>
+                <span class="article-item__type">news</span>
+                <div class="article-item__text">
+                  <p>Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                </div>
 
+                <div class="article-item__item-footer">
+                  <time class="article-item__date" datetime="2020-01-28 19:00">
+                    <svg class="" width="10px" height="10px" fill="inherit">
+                      <use xlink:href="images/sprite/stack/sprite.svg#calendar"></use>
+                    </svg>
+                    28 JANUARY, 2020
+                  </time>
+                  <span class="article-item__author">
+                    <svg class="" width="10px" height="10px" fill="inherit">
+                      <use xlink:href="images/sprite/stack/sprite.svg#user"></use>
+                    </svg>
+                    BY ADMIN
+                  </span>
+                </div>
+              </article>
             </li>
 
             <li class="articles__item">
-              <a class="articles__link" href="#">
-                <img class="articles__img" src="images/articles/2.jpg" alt="article img">
-              </a>
-              <span class="articles__type">news</span>
-              <div class="articles__text">
-                <p>Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
-              </div>
 
-              <div class="articles__item-footer">
-                <span class="articles__date"> 28 JANUARY, 2020</span>
-                <span class="articles__author"> BY ADMIN</span>
-              </div>
+              <article class="article-item">
+                <a class="article-item__link" href="#">
+                  <img class="article-item__img" src="images/articles/2.jpg" alt="article img">
+                </a>
+                <span class="article-item__type">news</span>
+                <div class="article-item__text">
+                  <p>Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
+                </div>
+
+                <div class="article-item__item-footer">
+                  <time class="article-item__date" datetime="2020-01-28 19:00">
+                    <svg class="" width="10px" height="10px" fill="inherit">
+                      <use xlink:href="images/sprite/stack/sprite.svg#calendar"></use>
+                    </svg>
+                    28 JANUARY, 2020
+                  </time>
+                  <span class="article-item__author">
+                    <svg class="" width="10px" height="10px" fill="inherit">
+                      <use xlink:href="images/sprite/stack/sprite.svg#user"></use>
+                    </svg>
+                    BY ADMIN
+                  </span>
+                </div>
+              </article>
             </li>
 
             <li class="articles__item">
-              <a class="articles__link" href="#">
-                <img class="articles__img" src="images/articles/3.jpg" alt="article img">
-              </a>
-              <span class="articles__type">news</span>
-              <div class="articles__text">
-                <p>Rncididunt ut labore et dolore magna aliqua. Ut enim </p>
-              </div>
 
-              <div class="articles__item-footer">
-                <span class="articles__date"> 28 JANUARY, 2020</span>
-                <span class="articles__author"> BY ADMIN</span>
-              </div>
+              <article class="article-item">
+                <a class="article-item__link" href="#">
+                  <img class="article-item__img" src="images/articles/3.jpg" alt="article img">
+                </a>
+                <span class="article-item__type">news</span>
+                <div class="article-item__text">
+                  <p>Rncididunt ut labore et dolore magna aliqua. Ut enim </p>
+                </div>
+
+                <div class="article-item__item-footer">
+                  <time class="article-item__date" datetime="2020-01-28 19:00">
+                    <svg class="" width="10px" height="10px" fill="inherit">
+                      <use xlink:href="images/sprite/stack/sprite.svg#calendar"></use>
+                    </svg>
+                    28 JANUARY, 2020
+                  </time>
+                  <span class="article-item__author">
+                    <svg class="" width="10px" height="10px" fill="inherit">
+                      <use xlink:href="images/sprite/stack/sprite.svg#user"></use>
+                    </svg>
+                    BY ADMIN
+                  </span>
+                </div>
+              </article>
             </li>
           </ul>
         </div>
@@ -712,46 +767,46 @@
     </section>
 
     <div class="our-partners">
-      <div class="our-partners__slider-wrapper">
+      <div class="our-partners__wrapper">
         <div class="small-container">
 
           <ul class="our-partners__slider">
             <li class="our-partners__item">
-              <img class="our-partners__logo" src="images/partners/1.png" alt="partner logo" class="our-partners__logo">
+              <img class="our-partners__logo" src="images/partners/1.png" alt="partner logo">
             </li>
             <li class="our-partners__item">
-              <img class="our-partners__logo" src="images/partners/2.png" alt="partner logo" class="our-partners__logo">
+              <img class="our-partners__logo" src="images/partners/2.png" alt="partner logo">
             </li>
             <li class="our-partners__item">
-              <img class="our-partners__logo" src="images/partners/3.png" alt="partner logo" class="our-partners__logo">
+              <img class="our-partners__logo" src="images/partners/3.png" alt="partner logo">
             </li>
             <li class="our-partners__item">
-              <img class="our-partners__logo" src="images/partners/4.png" alt="partner logo" class="our-partners__logo">
+              <img class="our-partners__logo" src="images/partners/4.png" alt="partner logo">
             </li>
             <li class="our-partners__item">
-              <img class="our-partners__logo" src="images/partners/5.png" alt="partner logo" class="our-partners__logo">
+              <img class="our-partners__logo" src="images/partners/5.png" alt="partner logo">
             </li>
             <li class="our-partners__item">
-              <img class="our-partners__logo" src="images/partners/1.png" alt="partner logo" class="our-partners__logo">
+              <img class="our-partners__logo" src="images/partners/1.png" alt="partner logo">
             </li>
             <li class="our-partners__item">
-              <img class="our-partners__logo" src="images/partners/2.png" alt="partner logo" class="our-partners__logo">
+              <img class="our-partners__logo" src="images/partners/2.png" alt="partner logo">
             </li>
             <li class="our-partners__item">
-              <img class="our-partners__logo" src="images/partners/3.png" alt="partner logo" class="our-partners__logo">
+              <img class="our-partners__logo" src="images/partners/3.png" alt="partner logo">
             </li>
             <li class="our-partners__item">
-              <img class="our-partners__logo" src="images/partners/4.png" alt="partner logo" class="our-partners__logo">
+              <img class="our-partners__logo" src="images/partners/4.png" alt="partner logo">
             </li>
             <li class="our-partners__item">
-              <img class="our-partners__logo" src="images/partners/5.png" alt="partner logo" class="our-partners__logo">
+              <img class="our-partners__logo" src="images/partners/5.png" alt="partner logo">
             </li>
           </ul>
         </div>
       </div>
     </div>
 
-
+   
   </main>
 
   <footer class="footer">
@@ -843,8 +898,8 @@
             </p>
 
             <label class="footer__label"><span class="visually-hidden">email subscription on newsletters</span>
-              <input class="footer__input" type="email" name="email" placeholder="Email address" required><button
-                class="footer__btn" type="submit">Subscribe</button>
+              <input class="footer__input" type="email" name="email" placeholder="Email address" required>
+              <button class="footer__btn" type="submit">Subscribe</button>
             </label>
           </form>
         </div>

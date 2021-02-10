@@ -17,15 +17,11 @@ body {
   flex-grow: 1;
 }
 
-button {
-  cursor: pointer;
-}
-
 .title {
   @extend %dmsans-700;
   font-size: 36px;
   color: $title-color;
-  text-align: center;  
+  text-align: center;
 }
 
 .large-container {
@@ -36,7 +32,7 @@ button {
 
 .small-container {
   @extend .large-container;
-  max-width: 1200px;  
+  max-width: 1200px;
 }
 
 .visually-hidden {
@@ -70,8 +66,8 @@ body:not(.user-is-tabbing) textarea:focus {
 
 .square-control {
   position: relative;
-  display: block;  
-  max-width: 200px;
+  display: block;
+  width: 200px;  
   padding: 22px 50px 22px 28px;
   @extend %rubik-500;
   font-size: 15px;
@@ -81,4 +77,11 @@ body:not(.user-is-tabbing) textarea:focus {
     top: 52%;
     transform: translate(270%, -50%);
   }
+}
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline-color: $header-color;
 }

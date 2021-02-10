@@ -4,12 +4,14 @@
   flex-direction: column;
   align-items: center;
   max-width: 270px;
-  height: 380px;
+  height: 100%;
+  padding: 10px;
   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
 
   &__img {
+    display: block;
     max-width: 238px;
     max-height: 206px;
     object-fit: contain;
@@ -23,7 +25,7 @@
   }
 
   &__name {    
-    @include line-clamp(16px, 1.3, 2);
+    @include line-clamp(16px, 1.3, 1);
     display: block;
     @extend %dmsans-500;
     margin-bottom: 10px;
@@ -35,7 +37,7 @@
   }
 
   &__hover-menu {
-    width: 170px;
+    min-width: 170px;
     position: absolute;
     display: flex;
     top: 50%;
@@ -72,5 +74,9 @@
     .product-card__hover-menu {
       opacity: 1;
     }
+  }
+
+  @media (max-width: 1199px) {
+    margin: 0 auto;
   }
 }

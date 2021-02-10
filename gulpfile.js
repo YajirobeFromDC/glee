@@ -10,6 +10,14 @@ const svgSprite = require('gulp-svg-sprite');
 
 function svgSprites() {
     return src('app/images/svg/**.svg')
+        .pipe(imagemin([
+            imagemin.svgo({
+                plugins: [
+                    { removeStyleElement: true },
+                    { removeAttrs: { attrs: '(fill|data-name)' } }
+                ]
+            })
+        ]))
         .pipe(svgSprite({
             mode: {
                 stack: {
@@ -63,12 +71,12 @@ function images() {
 }
 
 function browsersync() {
-  browserSync.init({
-      server: {
-          baseDir: 'app/'
-      },
-      notify: false
-  });
+    browserSync.init({
+        server: {
+            baseDir: 'app/'
+        },
+        notify: false
+    });
 }
 
 function build() {

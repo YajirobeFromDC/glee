@@ -1,0 +1,103 @@
+.lamps {
+  margin: 186px 0px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 390px;
+  column-gap: 30px;
+
+  &__item {
+    position: relative;
+    background-color: #feefe2;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__img {
+    position: absolute;
+    left: 120px;
+    bottom: 80px;
+    max-width: 235px;
+    max-height: 405px;
+    object-fit: contain;
+  }
+
+  &__container {
+    margin-right: 80px;
+    margin-left: auto;
+    max-width: 330px;
+  }
+
+  &__name {
+    @include line-clamp(26px, 1.3, 2);
+    @extend %dmsans-700;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    @include line-clamp(16px, 2, 2);
+    margin-bottom: 34px;    
+  }
+
+  &__link {
+    color: $header-color;
+    max-width: 180px;
+    border: 1px solid #b3b7b5;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+
+    svg {
+      fill: $header-color;
+      transform: translate(180%, -50%);
+    }
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    &:active {
+      transform: scale(0.99);
+    }
+  }
+
+  @media (max-width: 1199px) {
+    &__img {
+      left: 0px;
+      max-width: 205px;
+      max-height: 375px;
+    }
+
+    &__container {
+      margin-right: 0px;
+    }
+  }
+
+  /* Стили для средних экранов (0 - 991 пикселей) */
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(auto-fill, minmax(561px, 1fr));  
+    grid-row-gap: 40px;
+    &__img {
+      left: 20%;
+    }
+  }
+
+  /* Стили для маленьких экранов (0 - 767 пикселей) */
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); 
+
+    &__img {
+      left: 0;
+      max-width: 170px;
+      max-height: 375px;
+    }
+  }
+
+  /* Стили для очень маленьких экранов (0 - 575 пикселей) */
+  @media (max-width: 575px) {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    &__img {
+      display: none;
+    }
+  }
+}
